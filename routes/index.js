@@ -8,6 +8,8 @@ const apiKey = process.env.TMDB_API_KEY;
 const urlToDiscoverMovie =
     `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`
 
+console.log('correctly readed');
+
 router.get('/movies', (req, res) => {
     fetch(urlToDiscoverMovie)
         .then(response => response.json())
